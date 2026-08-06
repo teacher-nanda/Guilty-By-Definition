@@ -31,19 +31,19 @@
     background: var(--paper);
     color: var(--ink);
     line-height:1.6;
-    font-size: 18px;
+    font-size: 21px;
   }
   .page{
     display:flex;
     align-items:flex-start;
-    max-width: 1320px;
+    max-width: 1680px;
     margin: 0 auto;
   }
   .wrap{
-    max-width: 900px;
+    max-width: 1320px;
     flex: 1 1 auto;
     margin: 0 auto;
-    padding: 0 24px 90px;
+    padding: 0 32px 90px;
     min-width: 0;
   }
 
@@ -63,16 +63,16 @@
     margin-bottom: 10px;
   }
   header.hero h1{
-    font-size: 2.3em;
+    font-size: 2.8em;
     margin: 0 0 8px;
     font-weight: 700;
   }
   header.hero p.sub{
     font-style: italic;
     color: #eaddc4;
-    max-width: 560px;
+    max-width: 640px;
     margin: 0 auto;
-    font-size: 1.02em;
+    font-size: 1.1em;
   }
   header.hero .badges{
     display:flex;
@@ -85,9 +85,9 @@
     display:inline-block;
     background: rgba(255,255,255,0.12);
     border: 1px solid rgba(255,255,255,0.35);
-    padding: 6px 16px;
+    padding: 8px 18px;
     border-radius: 30px;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.5px;
   }
   header.hero .badge.next{
@@ -170,9 +170,9 @@
     background: var(--burgundy);
     color:#fff;
     border:none;
-    border-radius: 24px;
-    padding: 10px 18px;
-    font-size: 15px;
+    border-radius: 28px;
+    padding: 13px 24px;
+    font-size: 17px;
     font-family: var(--font);
     cursor:pointer;
     display:flex;
@@ -180,16 +180,16 @@
     gap:6px;
   }
   .nav-btn:disabled{ background:#cbb; opacity:0.4; cursor:default; }
-  .dots{ display:flex; gap:6px; flex-wrap:wrap; justify-content:center; }
+  .dots{ display:flex; gap:7px; flex-wrap:wrap; justify-content:center; }
   .dot{
-    width:9px;height:9px;border-radius:50%;
+    width:11px;height:11px;border-radius:50%;
     background: var(--line);
     cursor:pointer;
     border:none;
     padding:0;
   }
-  .dot.active{ background: var(--burgundy); width:22px; border-radius:6px; }
-  .counter{ font-size:13px; color:var(--ink-soft); white-space:nowrap; }
+  .dot.active{ background: var(--burgundy); width:26px; border-radius:7px; }
+  .counter{ font-size:15px; color:var(--ink-soft); white-space:nowrap; }
 
   .slide{
     display:none;
@@ -197,20 +197,20 @@
     border: 1px solid var(--line);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 26px 26px 30px;
-    min-height: 400px;
+    padding: 40px 48px 46px;
+    min-height: 560px;
   }
   .slide.active{ display:block; animation: fadein .3s ease; }
   @keyframes fadein{ from{opacity:0;transform:translateY(8px);} to{opacity:1;transform:translateY(0);} }
 
-  .slide-top{ display:flex; align-items:center; gap:14px; margin-bottom: 6px; }
+  .slide-top{ display:flex; align-items:center; gap:20px; margin-bottom: 10px; }
   .slide-num{
     background: var(--burgundy); color:#fff;
-    min-width:50px; height:50px; border-radius:50%;
+    min-width:66px; height:66px; border-radius:50%;
     display:flex; align-items:center; justify-content:center;
-    font-size:18px; font-weight:bold; flex-shrink:0;
+    font-size:24px; font-weight:bold; flex-shrink:0;
   }
-  .slide-titles h2{ margin:0 0 2px; font-size:1.35em; color:var(--ink); }
+  .slide-titles h2{ margin:0 0 4px; font-size:1.8em; color:var(--ink); }
   .slide-titles .hook{ font-size:0.85em; color:var(--ink-soft); font-style:italic; }
 
   /* beat strip */
@@ -218,72 +218,73 @@
     display:flex;
     align-items:flex-start;
     justify-content:space-between;
-    margin: 26px 0 22px;
+    margin: 32px 0 30px;
     position:relative;
-    gap: 6px;
+    gap: 14px;
   }
   .beat-strip::before{
     content:'';
     position:absolute;
-    top:27px; left:13%; right:13%;
-    height:2px;
+    top:35px; left:13%; right:13%;
+    height:3px;
     background: var(--line);
     z-index:0;
   }
   .beat{ position:relative; z-index:1; flex:1; text-align:center; }
   .beat .icon{
-    width:54px;height:54px;border-radius:50%;
+    width:72px;height:72px;border-radius:50%;
     background: var(--paper-2);
-    border:2px solid var(--gold);
+    border:3px solid var(--gold);
     display:flex; align-items:center; justify-content:center;
-    font-size:24px; margin:0 auto 8px;
+    font-size:32px; margin:0 auto 10px;
   }
-  .beat .txt{ font-size:12.5px; color:var(--ink-soft); max-width:120px; margin:0 auto; line-height:1.35; }
+  .beat .txt{ font-size:15px; color:var(--ink-soft); max-width:160px; margin:0 auto; line-height:1.35; }
 
   /* pull quote */
   .pull-quote{
-    border-left: 5px solid var(--gold);
+    border-left: 6px solid var(--gold);
     background: #fbf3de;
-    padding: 16px 20px;
-    margin: 6px 0 22px;
-    border-radius: 6px;
+    padding: 22px 28px;
+    margin: 8px 0 28px;
+    border-radius: 8px;
     position:relative;
   }
   .pull-quote .mark{
-    font-size: 2.6em;
+    font-size: 3.4em;
     color: #e6c98a;
     line-height:0;
     position:relative;
-    top: 14px;
+    top: 18px;
     font-family: Georgia, serif;
   }
   .pull-quote p{
-    margin: -6px 0 0;
+    margin: -10px 0 0;
     font-style: italic;
     color: #4a3d20;
-    font-size: 1.02em;
+    font-size: 1.25em;
   }
 
   /* tag grid (highlights + notes) */
   .tag-grid{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
-    gap: 12px;
-    margin: 18px 0 22px;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 16px;
+    margin: 22px 0 28px;
   }
   .tag-card{
-    border-radius: 10px;
-    padding: 12px 14px;
-    border-left: 5px solid;
-    font-size: 14px;
+    border-radius: 12px;
+    padding: 16px 18px;
+    border-left: 6px solid;
+    font-size: 16.5px;
+    line-height:1.45;
   }
   .tag-card .badge{
-    font-size: 10.5px;
+    font-size: 12.5px;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing:0.4px;
-    display:flex; align-items:center; gap:5px;
-    margin-bottom: 6px;
+    display:flex; align-items:center; gap:6px;
+    margin-bottom: 8px;
   }
   .tag-bang{ background:#fdeceb; border-color:var(--burgundy-soft); }
   .tag-bang .badge{ color:var(--burgundy-soft); }
@@ -298,27 +299,27 @@
   .char-row{
     display:flex;
     flex-wrap:wrap;
-    gap: 16px;
-    margin: 8px 0 22px;
+    gap: 22px;
+    margin: 10px 0 28px;
   }
-  .char-avatar{ text-align:center; width:92px; }
+  .char-avatar{ text-align:center; width:120px; }
   .char-avatar .circle{
-    width:56px;height:56px;border-radius:50%;
+    width:72px;height:72px;border-radius:50%;
     display:flex; align-items:center; justify-content:center;
-    color:#fff; font-weight:bold; font-size:15px;
-    margin:0 auto 6px;
+    color:#fff; font-weight:bold; font-size:20px;
+    margin:0 auto 8px;
   }
-  .char-avatar .nm{ font-size:11.5px; font-weight:bold; line-height:1.2; }
-  .char-avatar .rl{ font-size:10.5px; color:var(--ink-soft); line-height:1.25; }
+  .char-avatar .nm{ font-size:14.5px; font-weight:bold; line-height:1.25; }
+  .char-avatar .rl{ font-size:13px; color:var(--ink-soft); line-height:1.3; }
 
   /* vocab flip cards */
   .vocab-flip-grid{
     display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px,1fr));
-    gap: 12px;
-    margin: 6px 0 8px;
+    grid-template-columns: repeat(auto-fill, minmax(170px,1fr));
+    gap: 16px;
+    margin: 8px 0 8px;
   }
-  .flip-card{ perspective:600px; height:86px; cursor:pointer; }
+  .flip-card{ perspective:600px; height:110px; cursor:pointer; }
   .flip-inner{
     position:relative; width:100%; height:100%;
     transition: transform .5s;
@@ -328,28 +329,50 @@
   .flip-front,.flip-back{
     position:absolute; inset:0;
     backface-visibility:hidden;
-    border-radius:10px;
+    border-radius:12px;
     display:flex; align-items:center; justify-content:center;
-    text-align:center; padding:8px;
+    text-align:center; padding:12px;
   }
   .flip-front{
     background:#eef4ee; border:1px solid #cfe0cf; color:#2f4a2c;
-    font-weight:bold; font-size:13px;
+    font-weight:bold; font-size:16px;
   }
   .flip-back{
     background:#2f4a2c; color:#fff;
     transform: rotateY(180deg);
-    font-size:11.5px; line-height:1.3;
+    font-size:14px; line-height:1.35;
   }
-  .vocab-hint{ font-size:11.5px; color:var(--ink-soft); margin: 0 0 8px; font-style:italic; }
+  .vocab-hint{ font-size:14px; color:var(--ink-soft); margin: 0 0 10px; font-style:italic; }
 
   .section-label{
-    font-size: 13px;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--ink-soft);
-    margin: 20px 0 8px;
+    margin: 26px 0 10px;
     font-weight:bold;
+  }
+
+  .summary-card{
+    background: var(--paper-2);
+    border-left: 6px solid var(--blue);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 6px 0 24px;
+  }
+  .summary-card .lbl{
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--blue);
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .summary-card p{
+    margin: 0;
+    font-size: 1.05em;
+    line-height: 1.55;
+    color: var(--ink);
   }
 
   /* character map slide */
@@ -358,11 +381,12 @@
   /* final slide */
   .final-q{
     background: var(--paper-2);
-    border-radius: 10px;
-    padding: 13px 16px;
-    margin: 10px 0;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 14px 0;
     border: 1px solid var(--line);
-    font-size:0.95em;
+    font-size:1.05em;
+    line-height:1.5;
   }
   .final-q b{ color: var(--burgundy); }
 
@@ -377,8 +401,8 @@
   #notes-panel{
     position: sticky;
     top: 70px;
-    width: 300px;
-    flex: 0 0 300px;
+    width: 340px;
+    flex: 0 0 340px;
     margin: 22px 20px 22px 0;
     align-self: flex-start;
     max-height: calc(100vh - 100px);
@@ -402,7 +426,7 @@
     flex-shrink:0;
   }
   #notes-panel .notes-head span.title{
-    font-size: 15px; letter-spacing:0.3px; white-space:nowrap; overflow:hidden;
+    font-size: 17px; letter-spacing:0.3px; white-space:nowrap; overflow:hidden;
   }
   #notes-panel.collapsed .notes-head span.title{ display:none; }
   #notes-panel .notes-head .toggle-btn{
@@ -423,9 +447,9 @@
     background: #fffdf8; color: var(--ink); font-family: var(--font);
   }
   #notes-panel textarea{
-    width:100%; min-height: 240px; border: 1px solid var(--line);
+    width:100%; min-height: 260px; border: 1px solid var(--line);
     border-radius: 8px; padding: 10px 12px; font-family: inherit;
-    font-size: 14.5px; line-height:1.5; resize: vertical;
+    font-size: 16px; line-height:1.5; resize: vertical;
     background: #fffdf8; color: var(--ink);
   }
   #notes-panel .save-hint{ font-size: 11.5px; color: #9a9080; margin-top: 6px; }
@@ -665,6 +689,7 @@ const chapters = [
   {
     n: 1, title: "The Letter Arrives",
     hook: "A mystery letter, signed 'Chorus,' turns out to be about Martha's missing sister.",
+    summary: "Martha Thornhill and her small team at the Clarendon English Dictionary receive a strange letter, signed only \"Chorus,\" full of Shakespeare quotes about secrets, truth, and murder. Decoding a hidden acrostic, they piece together a date — 2010 — and Martha realizes with horror that the letter is about her older sister Charlie, who vanished that year and was never found.",
     quote: "Truth will come to light. Murder cannot be hid long.",
     beats: [
       {icon:"✉️", txt:"Mystery letter arrives, signed \"Chorus\""},
@@ -696,6 +721,7 @@ const chapters = [
   {
     n: 2, title: "The Book Launch",
     hook: "At Jonathan's party, a misquote cracks the letter's code — and confirms it's about Charlie.",
+    summary: "At the launch party for Jonathan Overton's new book, Martha's godmother Gemma turns out to be his literary agent and an old family friend. Jonathan spots a deliberate misquote in the letter, cracking a second hidden clue, and by the end of the night it's confirmed: the letter really is about Charlie's 2010 disappearance from the CED.",
     quote: "I didn't realise this was a homecoming. You must know half the people here.",
     beats: [
       {icon:"🥂", txt:"Museum party for Jonathan's new book"},
@@ -726,6 +752,7 @@ const chapters = [
   {
     n: 3, title: "Ghosts in Oxford",
     hook: "Thirteen years on, Martha still sees Charlie everywhere — and her parents grieve very differently.",
+    summary: "Thirteen years after Charlie vanished, Martha still catches herself mistaking strangers for her sister on the street. We learn the police found Charlie's bike near the ring road and assumed she'd run away, while Martha's parents — warm, hopeful Rebecca and cool, reserved Gabriel — grieve in completely different ways.",
     quote: "Truth will come to light. Murder cannot be hid long.",
     beats: [
       {icon:"👻", txt:"Martha keeps seeing Charlie's \"ghost\""},
@@ -749,6 +776,7 @@ const chapters = [
   {
     n: 4, title: "Talking About Charlie",
     hook: "The team opens up — Charlie wasn't always easy to love.",
+    summary: "The team finally talks openly about Charlie, revealing she was a PhD student who also worked part-time at the CED, and that she vanished the same week as Jonathan's first book launch. Simon and Alex admit she could be brilliant and charming but also sharp enough to leave \"invisible wounds\" — complicating the picture of a perfect missing girl.",
     quote: "A conversation with Charlie left you with tiny wounds dealt by invisible archers, and they festered.",
     beats: [
       {icon:"🍷", txt:"Alex & Simon share memories"},
@@ -776,6 +804,7 @@ const chapters = [
   {
     n: 5, title: "A Postcard for Alex",
     hook: "The mystery widens: Alex gets a threatening postcard of her own.",
+    summary: "We see a quieter side of Alex at home with her cat, Rags — until a postcard of the CED building arrives with a chilling message: \"I DO DESPISE A LIAR.\" It's now clear Chorus isn't writing only to Martha.",
     quote: "I DO DESPISE A LIAR",
     beats: [
       {icon:"🐱", txt:"Alex, home alone, with her cat Rags"},
@@ -797,6 +826,7 @@ const chapters = [
   {
     n: 6, title: "Charlie's Room",
     hook: "Martha steps into Charlie's untouched bedroom — kept exactly as it was in 2010.",
+    summary: "Martha returns to her family home and steps into Charlie's bedroom, preserved untouched since 2010 at her mother's wishes. Her father Gabriel catches her there and refuses to let the room change, and the next morning Martha finds two old postcards suggesting Chorus has been in contact with the family for far longer than anyone realized.",
     quote: "You can't have this room, Martha. This is Charlie's, for as long as I'm allowed to stay.",
     beats: [
       {icon:"🚪", txt:"Charlie's room, frozen in time"},
@@ -819,6 +849,7 @@ const chapters = [
   {
     n: 7, title: "One Postcard a Year",
     hook: "Safi finds proof: Chorus has been writing to the office for over a decade.",
+    summary: "Safi digs through the CED's old correspondence archive and finds proof: someone has sent one postcard every single year since 2011, always on Charlie's birthday, always to former boss Mike Orme, always built around words for lying and falsehood. The team decides to keep investigating quietly rather than alarm Jonathan.",
     quote: "FALSEDICT: AN UNTRUE DELIVERANCE OR UTTERANCE",
     beats: [
       {icon:"🗂️", txt:"Safi searches the old archive"},
@@ -840,6 +871,7 @@ const chapters = [
   {
     n: 8, title: "Among the Gravestones",
     hook: "Martha, a self-confessed graveyard-lover, reflects on how different she and Charlie really were.",
+    summary: "Wandering her favourite graveyard — she's a self-confessed \"taphophile\" — Martha reflects on how different she and Charlie really were: Charlie always driven and in motion, Martha always content to stay in her shadow. By the end of the chapter she decides there's no avoiding it any longer: it's time to go to the police.",
     quote: "We define ourselves by comparison with others — I am not like them, so I am like this.",
     beats: [
       {icon:"⚰️", txt:"Martha, the \"taphophile\""},
@@ -865,6 +897,7 @@ const chapters = [
   {
     n: 9, title: "At the Police Station",
     hook: "Martha lays out the facts for Detective Caldwell — and hears an unsettling theory.",
+    summary: "Martha lays out everything for Detective Oliver Caldwell at St Aldates police station, and together they revisit the hard facts of Charlie's disappearance — the ended relationship, the cancelled lunch, the abandoned bike. Caldwell's verdict is unsettling: whoever Chorus is, they almost certainly know Martha and her team personally.",
     quote: "If it's not just a random person who's read about the case online, then we have to assume it's someone who knows you and your team.",
     beats: [
       {icon:"🏢", txt:"St Aldates police station"},
@@ -886,6 +919,7 @@ const chapters = [
   {
     n: 10, title: "Did You Like Charlie?",
     hook: "Martha asks bluntly — and gets honest, uncomfortable answers.",
+    summary: "Martha asks her colleagues bluntly whether they actually liked her sister, and gets honest, uncomfortable answers — Simon admits Charlie could be subtly patronising, and a former colleague once called her \"blithely self-confident,\" someone who saw people who struggled under pressure as weak. Martha also calls Mike Orme, the retired former boss, and asks him to come back to Oxford.",
     quote: "I don't mean I had anything against Charlie... but if I'm being honest I didn't warm to her.",
     beats: [
       {icon:"🗣️", txt:"Martha asks, directly"},
@@ -907,6 +941,7 @@ const chapters = [
   {
     n: 11, title: "Cracks in the Shakespeare Legend",
     hook: "A new letter arrives — and Jonathan's Shakespeare expertise quietly takes a hit.",
+    summary: "A new letter arrives, dense with religious language about captives, sanctuary, and salvation, just as the team's regular word-history meeting reveals another crack in Jonathan's Shakespeare expertise — a word once credited to him turns out to predate his own plays. Jonathan, distracted and on edge, barely seems to notice.",
     quote: "Confessing sins, where a captive of the past might expect sanctuary, will help you find your level.",
     beats: [
       {icon:"📜", txt:"New letter: captives, sanctuary"},
@@ -927,6 +962,7 @@ const chapters = [
   {
     n: 12, title: "The Clue in the Church",
     hook: "A hidden 'time signature' leads the team to a real 17th-century prisoner's carving.",
+    summary: "Martha finally snaps under the pressure of being toyed with by Chorus, but the team pushes on and decodes a hidden \"time signature\" in the letter, leading them to a real historical clue: a 17th-century prisoner's name carved into a church font in Burford. Martha connects the dots to Brin Edwards, a book dealer in Burford where Charlie once worked.",
     quote: "Who the hell is doing this? Turning my sister's disappearance into a parlour game?",
     beats: [
       {icon:"🎼", txt:"Hidden \"time signature\" found"},
@@ -948,6 +984,7 @@ const chapters = [
   {
     n: 13, title: "On the Road to Burford",
     hook: "The team drops everything to chase the clue — and Alex asks the question no one else dared.",
+    summary: "The team drops everything and drives to Burford to track down Brin Edwards, hoping he can explain why Chorus pointed them his way. On the road, Alex finally asks Martha the question no one else has dared — would she rather not know what happened to Charlie — while Simon's mention of Chaucer's \"The Pardoner's Tale\" leaves a warning about greed hanging over the whole group.",
     quote: "Martha, would you rather not know what happened to Charlie?",
     beats: [
       {icon:"🚗", txt:"The team drives to Burford"},
@@ -1039,6 +1076,11 @@ function buildChapterSlide(c, idx){
         <h2>${c.title}</h2>
         <div class="hook">${c.hook}</div>
       </div>
+    </div>
+
+    <div class="summary-card">
+      <div class="lbl">📖 What Happens</div>
+      <p>${c.summary}</p>
     </div>
 
     <div class="beat-strip">${beatsHtml}</div>
