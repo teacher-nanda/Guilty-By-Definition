@@ -465,6 +465,12 @@
     flex: 1 1 auto; font-family: var(--font);
   }
   #notes-panel .pdf-btn:hover{ background: #5a2020; }
+  #notes-panel .clear-all-btn{
+    font-size: 12.5px; background: none; border: 1px solid var(--burgundy-soft);
+    color: var(--burgundy-soft); padding: 6px 12px; border-radius: 20px; cursor:pointer;
+    font-family: var(--font); width: 100%;
+  }
+  #notes-panel .clear-all-btn:hover{ background: #fdeceb; }
 
   @media (max-width: 900px){
     .page{ flex-direction: column; }
@@ -550,6 +556,9 @@
       <div class="notes-btn-row">
         <button class="clear-btn" id="notes-clear">Clear this note</button>
         <button class="pdf-btn" id="notes-pdf">🖨️ Save Notes as PDF</button>
+      </div>
+      <div class="notes-btn-row">
+        <button class="clear-all-btn" id="notes-clear-all">🗑️ Clear All Notes</button>
       </div>
     </div>
   </aside>
@@ -1228,6 +1237,14 @@ const noteLabels = [
 function escapeHtml(str){
   return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
+const clearAllBtn = document.getElementById('notes-clear-all');
+clearAllBtn.addEventListener('click', () => {
+  const confirmed = window.confirm('Clear ALL notes — general, every chapter, and the big-picture questions? This can\'t be undone.');
+  if(!confirmed) return;
+  noteLabels.forEach(item => saveNote(item.key, ''));
+  textarea.value = loadNote(select.value);
+});
+
 pdfBtn.addEventListener('click', () => {
   const sections = noteLabels
     .map(item => ({ label: item.label, text: loadNote(item.key) }))
