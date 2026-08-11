@@ -495,12 +495,12 @@
   <h1>Guilty by Definition</h1>
   <p class="sub">by Susie Dent — a mystery told through words, letters, and the dictionary that holds them</p>
   <div class="badges">
-    <div class="badge">📖 Today: Chapters 1–13</div>
-    <div class="badge next">🔜 Next time: Chapters 14 onward</div>
+    <div class="badge">📖 Today: Chapters 1–15</div>
+    <div class="badge next">🔜 Next time: Chapters 16 onward</div>
   </div>
   <div class="progress">
     <div class="progress-bar"><div class="progress-fill"></div></div>
-    <div class="progress-label">Part 1 of 4 · roughly 25% of the book</div>
+    <div class="progress-label">Session 1 · Chapters 1–15</div>
   </div>
 </header>
 
@@ -549,6 +549,8 @@
         <option value="ch11">Chapter 11</option>
         <option value="ch12">Chapter 12</option>
         <option value="ch13">Chapter 13</option>
+        <option value="ch14">Chapter 14</option>
+        <option value="ch15">Chapter 15</option>
         <option value="final">Big-picture questions</option>
       </select>
       <textarea id="note-textarea" placeholder="Write your thoughts, theories, and things to remember..."></textarea>
@@ -564,13 +566,13 @@
   </aside>
 </div>
 
-<footer>Made for our book club · Guilty by Definition, Susie Dent · Part 1: Chapters 1–13</footer>
+<footer>Made for our book club · Guilty by Definition, Susie Dent · Session 1: Chapters 1–15</footer>
 
 <script>
 /* ---------- character map SVG (reused) ---------- */
 const charMapSvg = `
 <svg viewBox="0 0 1100 840" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif" role="img">
-  <title>Character relationship map for Guilty by Definition, Chapters 1-13</title>
+  <title>Character relationship map for Guilty by Definition, Chapters 1-15</title>
   <desc>Network diagram showing the Thornhill family, the CED dictionary team, Charlie's outer circle, the police, and the mysterious letter-writer Chorus.</desc>
   <rect x="0" y="0" width="1100" height="840" fill="#ffffff"/>
   <g stroke-linecap="round">
@@ -1010,6 +1012,61 @@ const chapters = [
     vocab: [
       {w:"ert", d:"active, busy (opposite of inert)"}
     ]
+  },
+  {
+    n: 14, title: "The Cheshire Cat Bookshop",
+    hook: "At Charlie's old bookshop, Brin Edwards reveals a betrayal nobody knew about.",
+    summary: "The team visits the Cheshire Cat, the antiquarian bookshop where Charlie worked for eight years before she disappeared. Owner Brin Edwards reveals that she quit that same April — the year she vanished — and lied to her family about why. He also admits that, months before she left, he discovered Charlie had been secretly buying the best book lots for herself and reselling them, pocketing the profit.",
+    quote: "Why would Charlie give up working here and then lie about it?",
+    beats: [
+      {icon:"📚", txt:"Charlie's old bookshop, the Cheshire Cat"},
+      {icon:"🤥", txt:"She quit in 2010 — and lied about why"},
+      {icon:"💰", txt:"Secretly dealing books for herself"}
+    ],
+    tagged: [
+      {type:"bang", label:"Key moment", text:"Charlie quit in April 2010 — the year she disappeared — and lied to her family about it."},
+      {type:"bang", label:"Key moment", text:"Brin: \"It turned out she'd been buying the best lots for herself... keeping the profit.\""},
+      {type:"bang", label:"Key moment", text:"Confronted, \"she just laughed\" and told him it was his own fault."},
+      {type:"q", label:"Question", text:"Why would Charlie give up working here and then lie about it?"},
+      {type:"plus", label:"To discuss", text:"\"To enter the shop's doors was to leave all sense of sparring identities behind.\""}
+    ],
+    characters: [
+      {n:"Brin Edwards", d:"bookshop owner, knew Charlie 8 yrs"},
+      {n:"Charlie (through Brin)", d:"enthusiastic, charming — but self-serving"}
+    ],
+    vocab: [
+      {w:"philobiblist", d:"a lover of books"},
+      {w:"busman's holiday", d:"spending free time doing what you do for work"},
+      {w:"Verschlimmbesserung", d:"German: an \"improvement\" that makes things worse"},
+      {w:"shorthand", d:"a quick system of writing with symbols"}
+    ]
+  },
+  {
+    n: 15, title: "You're a Bolter",
+    hook: "Alex calls out Martha's habit of running away — then it's time to track down Tom.",
+    summary: "Martha and Alex talk over dictionary words like \"apricity\" (the warmth of winter sun) and \"respair\" (a recovery from despair) — and Alex bluntly calls Martha \"a bolter,\" someone who flees or retreats into her own head the moment things get hard. Still shaken by what Brin revealed, the team decides their next step is to track down Tom, Charlie's ex-boyfriend — and instead reach his wife, who is clearly not thrilled about the call.",
+    quote: "I know I can deal with the not-knowing. I've done it for years. I just don't know if I can live with the truth.",
+    beats: [
+      {icon:"☀️", txt:"Apricity & respair — new words"},
+      {icon:"🏃", txt:"Alex: \"You're a bolter\""},
+      {icon:"📞", txt:"Tracking down Tom, through his wife"}
+    ],
+    tagged: [
+      {type:"bang", label:"Key moment", text:"\"He did say he could have killed her\"... \"if he had, it would surely be the last thing he'd say.\""},
+      {type:"plus", label:"To discuss", text:"\"Whenever you are threatened, you flee, or you disappear into your own thoughts.\""},
+      {type:"plus", label:"To discuss", text:"\"Habits of a lifetime are hard to break.\""},
+      {type:"plus", label:"To discuss", text:"\"Once a word went into the CED, it never came out.\""}
+    ],
+    characters: [
+      {n:"Tom", d:"Charlie's ex-boyfriend"},
+      {n:"Tanya", d:"Charlie's old friend, same corridor"},
+      {n:"Tom's wife", d:"guarded; married 7 years"}
+    ],
+    vocab: [
+      {w:"oberration", d:"an old word for wandering off course"},
+      {w:"apricity", d:"the warmth of the sun on a winter's day"},
+      {w:"respair", d:"a recovery from despair"}
+    ]
   }
 ];
 
@@ -1121,7 +1178,7 @@ function buildFinalSlide(idx){
       <div class="slide-num">💭</div>
       <div class="slide-titles">
         <h2>Big-Picture Discussion</h2>
-        <div class="hook">For the whole group — after finishing Chapter 13</div>
+        <div class="hook">For the whole group — after finishing Chapter 15</div>
       </div>
     </div>
     <div class="final-q"><b>1. Truth vs. comfort.</b> "Truth will come to light." Is Martha better off knowing — even if it hurts?</div>
@@ -1130,7 +1187,9 @@ function buildFinalSlide(idx){
     <div class="final-q"><b>4. Language as detective work.</b> Etymology, acrostics, Shakespeare — words hiding and revealing the truth.</div>
     <div class="final-q"><b>5. Who is Chorus?</b> Based on the clues so far — who do you suspect, and why?</div>
     <div class="final-q"><b>6. Grief and rituals.</b> A room kept untouched. Grief without a body or an ending.</div>
-    <div class="final-q"><b>7. Predictions.</b> The team is headed to Burford, to meet Brin Edwards. What will they find?</div>
+    <div class="final-q"><b>7. A different Charlie.</b> Brin's story — the secret dealing, the lie about quitting — chips at the "golden girl" image. Does this change how you see her?</div>
+    <div class="final-q"><b>8. Are you a "bolter"?</b> Alex says Martha flees or retreats into her head when threatened. Do you recognize that in anyone — including yourself?</div>
+    <div class="final-q"><b>9. Predictions.</b> The team is about to talk to Tom, Charlie's ex-boyfriend. What do you think he knows?</div>
   `;
   slidesEl.appendChild(div);
 }
@@ -1232,6 +1291,8 @@ const noteLabels = [
   {key:'ch11', label:'Chapter 11 — Cracks in the Shakespeare Legend'},
   {key:'ch12', label:'Chapter 12 — The Clue in the Church'},
   {key:'ch13', label:'Chapter 13 — On the Road to Burford'},
+  {key:'ch14', label:'Chapter 14 — The Cheshire Cat Bookshop'},
+  {key:'ch15', label:'Chapter 15 — You’re a Bolter'},
   {key:'final', label:'Big-Picture Discussion Questions'}
 ];
 function escapeHtml(str){
@@ -1275,7 +1336,7 @@ pdfBtn.addEventListener('click', () => {
     </head>
     <body>
       <h1>Guilty by Definition — Book Club Notes</h1>
-      <div class="subtitle">Chapters 1–13 discussion &middot; ${new Date().toLocaleDateString()}</div>
+      <div class="subtitle">Chapters 1–15 discussion &middot; ${new Date().toLocaleDateString()}</div>
       ${bodyHtml}
     </body>
     </html>
