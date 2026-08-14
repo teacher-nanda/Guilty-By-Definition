@@ -303,6 +303,22 @@
     margin: 10px 0 28px;
   }
   .char-avatar{ text-align:center; width:120px; }
+  .poll-card{ background:var(--card); border:2px solid var(--line); border-radius:var(--radius); padding:20px 24px; margin:20px 0; box-shadow:var(--shadow); }
+  .poll-q{ font-weight:800; color:var(--burgundy); font-size:1.05em; margin-bottom:6px; }
+  .poll-prompt{ font-size:1.15em; margin-bottom:14px; color:var(--ink); line-height:1.4; }
+  .poll-options{ display:flex; flex-direction:column; gap:10px; }
+  .poll-opt{ position:relative; overflow:hidden; text-align:left; border:2px solid var(--line); border-radius:12px; background:var(--paper); padding:12px 16px; cursor:pointer; font-family:var(--font); font-size:1em; transition: border-color .15s, transform .1s; width:100%; }
+  .poll-opt:hover{ border-color:var(--gold); transform: translateY(-1px); }
+  .poll-opt:active{ transform: translateY(0); }
+  .poll-opt.voted{ border-color:var(--gold); }
+  .poll-opt-fill{ position:absolute; top:0; left:0; bottom:0; width:0%; background:linear-gradient(90deg, rgba(185,138,47,0.45) 0%, rgba(185,138,47,0.18) 100%); transition:width .5s ease; z-index:0; }
+  .poll-opt-content{ position:relative; z-index:1; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .poll-opt-text{ color:var(--ink); }
+  .poll-opt-pct{ font-weight:800; color:var(--burgundy); white-space:nowrap; }
+  .poll-footer{ display:flex; justify-content:space-between; align-items:center; margin-top:12px; font-size:0.85em; color:var(--ink-soft); }
+  .poll-reset{ background:none; border:none; color:var(--ink-soft); cursor:pointer; text-decoration:underline; font-size:0.9em; font-family:var(--font); padding:0; }
+  .poll-reset:hover{ color:var(--burgundy); }
+
   .char-avatar.clickable{ cursor:pointer; }
   .char-avatar.clickable .circle{ transition: transform 0.15s, box-shadow 0.15s; }
   .char-avatar.clickable:hover .circle{ transform: scale(1.08); box-shadow: 0 0 0 4px var(--paper-2), 0 0 0 6px var(--gold); }
@@ -801,7 +817,11 @@ const chapters = [
       {w:"crambazzled", d:"aged from drink & excess"},
       {w:"arachibutyrophobia", d:"fear of peanut butter on the roof of your mouth"},
       {w:"betwittering", d:"chattering on and on"}
-    ]
+    ],
+    poll: {
+      q: "If a cryptic letter like this landed in your inbox about someone you'd lost, what would you do?",
+      options: ["Decode it immediately — I'd need to know", "Leave it alone — it's too painful to reopen"]
+    }
   },
   {
     n: 2, title: "The Book Launch",
@@ -832,7 +852,11 @@ const chapters = [
       {w:"alliteration", d:"repeating starting sounds"},
       {w:"scansion", d:"analysing poetic rhythm"},
       {w:"nod-crafty", d:"nodding along while tuned out"}
-    ]
+    ],
+    poll: {
+      q: "Gemma turns out to be quietly connected to everyone in the room. Does that make you feel...",
+      options: ["Comforted — there's safety in a tight-knit circle", "Suspicious — that's a lot of overlapping ties"]
+    }
   },
   {
     n: 3, title: "Ghosts in Oxford",
@@ -856,7 +880,11 @@ const chapters = [
     vocab: [
       {w:"eidolon", d:"a phantom or ghostly image"},
       {w:"aspectabund", d:"very expressive-faced"}
-    ]
+    ],
+    poll: {
+      q: "Whose way of grieving do you think is healthier — Rebecca's hope, or Gabriel's silence?",
+      options: ["Rebecca — staying open and hopeful", "Gabriel — staying quiet and private", "Neither, honestly — both seem stuck"]
+    }
   },
   {
     n: 4, title: "Talking About Charlie",
@@ -884,7 +912,11 @@ const chapters = [
       {w:"newsmongers", d:"gossip-spreaders"},
       {w:"elf-shot", d:"an invisible, stinging wound"},
       {w:"platitude", d:"an empty, overused remark"}
-    ]
+    ],
+    poll: {
+      q: "Would you rather spend time with someone brilliant but sharp-tongued, or kind but unremarkable?",
+      options: ["Brilliant, even if it stings sometimes", "Kind, even if it's less exciting"]
+    }
   },
   {
     n: 5, title: "A Postcard for Alex",
@@ -906,7 +938,11 @@ const chapters = [
     vocab: [
       {w:"wone", d:"an old word for a home"},
       {w:"cajoled", d:"persuaded through flattery"}
-    ]
+    ],
+    poll: {
+      q: "\"I DO DESPISE A LIAR\" just landed in Alex's mailbox. What would you do next?",
+      options: ["Call the police right now", "Wait and gather more evidence first"]
+    }
   },
   {
     n: 6, title: "Charlie's Room",
@@ -929,7 +965,11 @@ const chapters = [
     vocab: [
       {w:"haphazardly", d:"without any plan"},
       {w:"odds and ends", d:"leftover small items"}
-    ]
+    ],
+    poll: {
+      q: "Gabriel keeps Charlie's room exactly as it was. Is that a comfort — or a trap?",
+      options: ["A comfort — it keeps her close", "A trap — it keeps the family stuck in 2010"]
+    }
   },
   {
     n: 7, title: "One Postcard a Year",
@@ -951,7 +991,11 @@ const chapters = [
     vocab: [
       {w:"zemblanity", d:"an unhappy discovery you expected"},
       {w:"higgledy-piggledy", d:"a disorderly jumble"}
-    ]
+    ],
+    poll: {
+      q: "The team decides to investigate quietly rather than tell Jonathan right away. Good call?",
+      options: ["Yes — protect him a little longer", "No — he deserved to know immediately"]
+    }
   },
   {
     n: 8, title: "Among the Gravestones",
@@ -977,7 +1021,11 @@ const chapters = [
       {w:"taphophile", d:"a lover of graveyards"},
       {w:"serried", d:"packed closely in rows"},
       {w:"apocryphal", d:"widely told, doubtful truth"}
-    ]
+    ],
+    poll: {
+      q: "\"We define ourselves by comparison with others.\" How true is that for you?",
+      options: ["Very true — I measure myself against people around me", "Not really — I try to judge myself on my own terms"]
+    }
   },
   {
     n: 9, title: "At the Police Station",
@@ -999,7 +1047,11 @@ const chapters = [
     vocab: [
       {w:"grob", d:"to sulk or look sullen"},
       {w:"onomastics", d:"the study of name origins"}
-    ]
+    ],
+    poll: {
+      q: "Caldwell says Chorus almost certainly knows the team personally. Which feels worse to you?",
+      options: ["Scarier — betrayal by someone close", "Easier — at least it isn't a total stranger"]
+    }
   },
   {
     n: 10, title: "Did You Like Charlie?",
@@ -1023,7 +1075,11 @@ const chapters = [
     ],
     vocab: [
       {w:"witship", d:"a rare word for having wit"}
-    ]
+    ],
+    poll: {
+      q: "Is it okay to admit you didn't like someone who's missing?",
+      options: ["Yes — honesty matters, even now", "No — some things are kinder left unsaid"]
+    }
   },
   {
     n: 11, title: "Cracks in the Shakespeare Legend",
@@ -1044,7 +1100,11 @@ const chapters = [
     ],
     vocab: [
       {w:"convent", d:"a religious community, esp. for nuns"}
-    ]
+    ],
+    poll: {
+      q: "A small, unnoticed error is quietly cracking Jonathan's expert reputation. Does that matter?",
+      options: ["Yes — accuracy should always matter", "Not much — one small slip shouldn't define a legacy"]
+    }
   },
   {
     n: 12, title: "The Clue in the Church",
@@ -1066,7 +1126,11 @@ const chapters = [
     ],
     vocab: [
       {w:"mathom", d:"kept, though unwanted (Tolkien)"}
-    ]
+    ],
+    poll: {
+      q: "Gemma invites Martha to a private dinner right as the pressure peaks. Your read on that?",
+      options: ["A kind, well-timed gesture", "Odd timing — a little suspicious"]
+    }
   },
   {
     n: 13, title: "On the Road to Burford",
@@ -1087,7 +1151,11 @@ const chapters = [
     ],
     vocab: [
       {w:"ert", d:"active, busy (opposite of inert)"}
-    ]
+    ],
+    poll: {
+      q: "\"Martha, would you rather not know what happened to Charlie?\" — your honest answer?",
+      options: ["Know the truth, whatever it costs", "Live with the uncertainty — some things are safer unknown"]
+    }
   },
   {
     n: 14, title: "The Cheshire Cat Bookshop",
@@ -1115,7 +1183,11 @@ const chapters = [
       {w:"busman's holiday", d:"spending free time doing what you do for work"},
       {w:"Verschlimmbesserung", d:"German: an \"improvement\" that makes things worse"},
       {w:"shorthand", d:"a quick system of writing with symbols"}
-    ]
+    ],
+    poll: {
+      q: "Charlie was secretly skimming profit from the shop. Does this change how you see her?",
+      options: ["Yes — it changes everything about her image", "No — people are complicated, this doesn't erase the rest"]
+    }
   },
   {
     n: 15, title: "You're a Bolter",
@@ -1141,7 +1213,11 @@ const chapters = [
       {w:"oberration", d:"an old word for wandering off course"},
       {w:"apricity", d:"the warmth of the sun on a winter's day"},
       {w:"respair", d:"a recovery from despair"}
-    ]
+    ],
+    poll: {
+      q: "Are you a \"bolter\" like Martha — do you flee or freeze under pressure?",
+      options: ["Yes — I retreat into my own head", "No — I tend to face things head-on", "Depends entirely on the situation"]
+    }
   }
 ];
 
@@ -1174,6 +1250,66 @@ function buildCharMapSlide(){
     ${charMapSvg}
   `;
   slidesEl.appendChild(div);
+}
+
+/* ---------- discussion polls ---------- */
+function loadPollVotes(chapterN, optCount){
+  try {
+    const raw = localStorage.getItem('gbd-poll-' + chapterN);
+    if(raw){
+      const parsed = JSON.parse(raw);
+      if(Array.isArray(parsed) && parsed.length === optCount) return parsed;
+    }
+  } catch(e){}
+  return new Array(optCount).fill(0);
+}
+function savePollVotes(chapterN, votes){
+  try { localStorage.setItem('gbd-poll-' + chapterN, JSON.stringify(votes)); } catch(e){}
+}
+function buildPollHtml(c){
+  const votes = loadPollVotes(c.n, c.poll.options.length);
+  const total = votes.reduce((a,b) => a+b, 0);
+  const optsHtml = c.poll.options.map((opt,i) => {
+    const pct = total ? Math.round(votes[i]/total*100) : 0;
+    return `
+    <button class="poll-opt${votes[i] === Math.max(...votes) && total ? ' voted' : ''}" data-opt="${i}">
+      <div class="poll-opt-fill" style="width:${pct}%"></div>
+      <div class="poll-opt-content">
+        <span class="poll-opt-text">${opt}</span>
+        <span class="poll-opt-pct">${total ? pct + '%' : ''}</span>
+      </div>
+    </button>`;
+  }).join('');
+  return `
+  <div class="poll-card" id="poll-${c.n}">
+    <div class="poll-q">🗳️ Quick poll — what's your take?</div>
+    <div class="poll-prompt">${c.poll.q}</div>
+    <div class="poll-options">${optsHtml}</div>
+    <div class="poll-footer">
+      <span class="poll-total">${total} vote${total===1?'':'s'} so far</span>
+      <button class="poll-reset">↺ reset poll</button>
+    </div>
+  </div>`;
+}
+function attachPollHandlers(div, c){
+  const container = div.querySelector('#poll-' + c.n);
+  if(!container) return;
+  container.querySelectorAll('.poll-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const votes = loadPollVotes(c.n, c.poll.options.length);
+      votes[Number(btn.dataset.opt)]++;
+      savePollVotes(c.n, votes);
+      container.outerHTML = buildPollHtml(c);
+      attachPollHandlers(div, c);
+    });
+  });
+  const resetBtn = container.querySelector('.poll-reset');
+  resetBtn.addEventListener('click', () => {
+    if(!window.confirm('Reset this poll\'s votes?')) return;
+    savePollVotes(c.n, new Array(c.poll.options.length).fill(0));
+    container.outerHTML = buildPollHtml(c);
+    attachPollHandlers(div, c);
+  });
 }
 
 function buildChapterSlide(c, idx){
@@ -1233,6 +1369,8 @@ function buildChapterSlide(c, idx){
 
     <div class="tag-grid">${taggedHtml}</div>
 
+    ${c.poll ? buildPollHtml(c) : ''}
+
     <div class="section-label">🗣️ Characters</div>
     <div class="char-row">${charHtml}</div>
 
@@ -1249,6 +1387,8 @@ function buildChapterSlide(c, idx){
   div.querySelectorAll('.char-avatar.clickable').forEach(av => {
     av.addEventListener('click', () => highlightMapNode(av.dataset.charkey));
   });
+
+  if(c.poll) attachPollHandlers(div, c);
 }
 
 function buildFinalSlide(idx){
