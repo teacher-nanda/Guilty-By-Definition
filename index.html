@@ -107,7 +107,7 @@
   }
   header.hero .progress-fill{
     height:100%;
-    width: 25%;
+    width: 30%;
     background: var(--gold);
   }
   header.hero .progress-label{
@@ -529,15 +529,15 @@
   <h1>Guilty by Definition</h1>
   <p class="sub">by Susie Dent — a mystery told through words, letters, and the dictionary that holds them</p>
   <div class="badges">
-    <div class="badge">📖 Today: Chapters 1–15</div>
-    <div class="badge next">🔜 Next time: Chapters 16 onward</div>
+    <div class="badge">📖 Today: Chapters 1–18</div>
+    <div class="badge next">🔜 Next time: Chapters 19 onward</div>
   </div>
   <div class="badges" style="margin-top:10px;">
     <a href="letters-and-postcards.html" class="badge" style="text-decoration:none;color:inherit;cursor:pointer;">🔎 The Chorus File — every letter & postcard</a>
   </div>
   <div class="progress">
     <div class="progress-bar"><div class="progress-fill"></div></div>
-    <div class="progress-label">Session 1 · Chapters 1–15</div>
+    <div class="progress-label">Session 1 · Chapters 1–18</div>
   </div>
 </header>
 
@@ -584,6 +584,9 @@
         <option value="ch13">Chapter 13</option>
         <option value="ch14">Chapter 14</option>
         <option value="ch15">Chapter 15</option>
+        <option value="ch16">Chapter 16</option>
+        <option value="ch17">Chapter 17</option>
+        <option value="ch18">Chapter 18</option>
         <option value="final">Big-picture questions</option>
       </select>
       <textarea id="note-textarea" placeholder="Write your thoughts, theories, and things to remember..."></textarea>
@@ -599,13 +602,13 @@
   </aside>
 </div>
 
-<footer>Made for our book club · Guilty by Definition, Susie Dent · Session 1: Chapters 1–15</footer>
+<footer>Made for our book club · Guilty by Definition, Susie Dent · Session 1: Chapters 1–18</footer>
 
 <script>
 /* ---------- character map SVG (reused) ---------- */
 const charMapSvg = `
 <svg viewBox="0 0 1100 870" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif" role="img">
-  <title>Character relationship map for Guilty by Definition, Chapters 1-15</title>
+  <title>Character relationship map for Guilty by Definition, Chapters 1-18</title>
   <desc>Network diagram showing the Thornhill family, the CED dictionary team, Charlie's outer circle, the police, and the mysterious letter-writer Chorus.</desc>
   <rect x="0" y="0" width="1100" height="870" fill="#ffffff"/>
   <g stroke-linecap="round">
@@ -1218,6 +1221,93 @@ const chapters = [
       q: "Are you a \"bolter\" like Martha — do you flee or freeze under pressure?",
       options: ["Yes — I retreat into my own head", "No — I tend to face things head-on", "Depends entirely on the situation"]
     }
+  },
+  {
+    n: 16, title: "Married to the Past",
+    hook: "Old resentments spill out at Tom and Tanya's — and a small handwriting detail raises a big question about Alex.",
+    summary: "The team visits Tom and Tanya at home, and Tanya — still guarded after all these years — accuses them outright of sending the postcards, before admitting she got one herself. Tom explains that after Charlie dumped him weeks before she vanished, police treated him as a suspect and questioned him for hours; both his and Tanya's postcards used the same photo from the original \"missing\" posters. Martha wonders aloud whether Charlie had been having an affair with someone older, someone who could help her career — and as Alex jots the date in her old-fashioned mixed-numeral style, Martha realizes it matches the handwriting on a postcard she found hidden in Charlie's shoebox.",
+    quote: "Where have you been, sister?",
+    beats: [
+      {icon:"🚗", txt:"Team visits Tom and Tanya's home"},
+      {icon:"😠", txt:"Tanya: \"Did you send those bloody postcards?\""},
+      {icon:"📅", txt:"Alex's odd dating habit echoes Charlie's postcard"}
+    ],
+    tagged: [
+      {type:"bang", label:"Key moment", text:"Both Tom and Tanya got their own postcards — Chorus isn't only writing to the CED team."},
+      {type:"bang", label:"Key moment", text:"Alex's habit of writing dates (day-month-year, mixed numerals) matches handwriting on a postcard from Charlie's own shoebox."},
+      {type:"plus", label:"To discuss", text:"Martha wonders if Charlie was having an affair with someone older — \"someone who could help her career.\""},
+      {type:"q", label:"Question", text:"Could Alex have some real connection to the postcards, or is this just an eerie coincidence?"}
+    ],
+    characters: [
+      {n:"Tanya", d:"suspicious, still resentful of Charlie"},
+      {n:"Tom", d:"once treated as a suspect by police"},
+      {n:"Alex", d:"her handwriting oddly matches a clue"}
+    ],
+    vocab: [
+      {w:"umbrage", d:"offense or annoyance, often taken quickly"},
+      {w:"PPE", d:"an Oxford degree: Politics, Philosophy & Economics"},
+      {w:"knock into next week", d:"an old-fashioned threat meaning to hit someone very hard"}
+    ],
+    poll: {
+      q: "Alex's handwriting habit eerily matches a mysterious postcard. Is this a real clue, or an unfair coincidence to read into?",
+      options: ["A real clue worth investigating", "Just an unfair coincidence"]
+    }
+  },
+  {
+    n: 17, title: "Safi's Discoveries",
+    hook: "Safi looks into Charlie's past online — and stumbles onto a tense, unexplained argument between Brin and Simon.",
+    summary: "While the team is in Burford, Safi searches for Charlie online and finds her described as beautiful but flawed — \"superior and even a little cruel\" — which stirs up Safi's own feelings about being the office's bookish outsider. Wandering the shop, she overhears Brin and Simon arguing in hushed, heated voices, Brin snapping \"I did you a favour! Don't you dare drag all that up again,\" before Simon notices her and stops abruptly. Safi then visits St John the Baptist Church to see the Anthony Sedley inscription and a reputedly haunted seventeenth-century tomb for herself.",
+    quote: "I did you a favour! Don't you dare drag all that up again.",
+    beats: [
+      {icon:"🔍", txt:"Safi researches Charlie online"},
+      {icon:"🤫", txt:"Overhears Brin and Simon arguing"},
+      {icon:"⛪", txt:"Visits the church font herself"}
+    ],
+    tagged: [
+      {type:"bang", label:"Key moment", text:"Brin snaps at Simon: \"I did you a favour... don't you dare drag all that up again.\""},
+      {type:"plus", label:"To discuss", text:"Safi feels like the office outsider — \"a geek whose love of her own company unsettled those who flourished only in the gaze of others.\""},
+      {type:"q", label:"Question", text:"What favour could Brin have done for Simon — and why is it still a secret?"}
+    ],
+    characters: [
+      {n:"Brin Edwards", d:"snaps at Simon — hiding something"},
+      {n:"Simon", d:"has an unexplained past with Brin"},
+      {n:"Safi", d:"researches Charlie, feels like the outsider"}
+    ],
+    vocab: [
+      {w:"videnda", d:"Latin: things worth seeing — a sightseeing checklist"}
+    ],
+    poll: {
+      q: "Brin and Simon are clearly hiding something between them. What do you think it is?",
+      options: ["An old business deal gone wrong", "Something to do with Charlie", "Something unrelated and personal", "Not sure yet — need more clues"]
+    }
+  },
+  {
+    n: 18, title: "A Word With Jonathan",
+    hook: "Martha confronts Jonathan at home — and finally asks the question she's avoided for years.",
+    summary: "Martha visits Jonathan's home to explain why she went to the police, but he seems more concerned that she skipped senior management first than about Charlie herself. Olivia, his wife, denies the family has received any odd postcards. On the doorstep, Martha finally asks Jonathan outright whether Charlie was in love with him — obsessed, even, as he'd once admitted — and he concedes he wondered if her interest in his work \"wasn't purely intellectual.\" Rattled, Martha calls Detective Caldwell on her way home.",
+    quote: "I thought she was in love with you. Obsessed, even. You said as much to me at the time.",
+    beats: [
+      {icon:"🚪", txt:"Martha visits Jonathan's home"},
+      {icon:"🙅", txt:"Olivia: \"We haven't had any odd postcards\""},
+      {icon:"❓", txt:"Martha finally asks about Charlie and Jonathan"}
+    ],
+    tagged: [
+      {type:"bang", label:"Key moment", text:"Jonathan admits he wondered if Charlie's interest in his work \"wasn't purely intellectual.\""},
+      {type:"plus", label:"To discuss", text:"Jonathan's first concern is protocol — \"you should have consulted senior management\" — not Charlie."},
+      {type:"q", label:"Question", text:"Why does Martha wait until she's leaving to ask the hardest question?"}
+    ],
+    characters: [
+      {n:"Jonathan Overton", d:"defensive about protocol; admits Charlie's obsession"},
+      {n:"Olivia", d:"denies receiving any postcards"}
+    ],
+    vocab: [
+      {w:"contristation", d:"an old word for deep sadness or grief"},
+      {w:"velleity", d:"a wish or inclination too weak to lead to action"}
+    ],
+    poll: {
+      q: "Jonathan seems more upset about protocol than about Charlie. What does that tell you about him?",
+      options: ["He's hiding something", "He's just a rigid, image-conscious person", "Grief just shows up differently for everyone"]
+    }
   }
 ];
 
@@ -1400,7 +1490,7 @@ function buildFinalSlide(idx){
       <div class="slide-num">💭</div>
       <div class="slide-titles">
         <h2>Big-Picture Discussion</h2>
-        <div class="hook">For the whole group — after finishing Chapter 15</div>
+        <div class="hook">For the whole group — after finishing Chapter 18</div>
       </div>
     </div>
     <div class="final-q"><b>1. Truth vs. comfort.</b> "Truth will come to light." Is Martha better off knowing — even if it hurts?</div>
@@ -1412,6 +1502,11 @@ function buildFinalSlide(idx){
     <div class="final-q"><b>7. A different Charlie.</b> Brin's story — the secret dealing, the lie about quitting — chips at the "golden girl" image. Does this change how you see her?</div>
     <div class="final-q"><b>8. Are you a "bolter"?</b> Alex says Martha flees or retreats into her head when threatened. Do you recognize that in anyone — including yourself?</div>
     <div class="final-q"><b>9. Predictions.</b> The team is about to talk to Tom, Charlie's ex-boyfriend. What do you think he knows?</div>
+    <div class="final-q"><b>10. A widening circle.</b> Now Tom and Tanya have postcards too. Why would Chorus reach beyond the CED office?</div>
+    <div class="final-q"><b>11. Alex's handwriting.</b> Her date-writing habit matches a clue from Charlie's shoebox. Coincidence, red herring, or something more?</div>
+    <div class="final-q"><b>12. Brin and Simon's secret.</b> "I did you a favour... don't you dare drag all that up again." What do you think really happened between them?</div>
+    <div class="final-q"><b>13. Jonathan's confession.</b> He admits he wondered if Charlie's interest in him "wasn't purely intellectual." Does this make you see him differently?</div>
+    <div class="final-q"><b>14. Who would you suspect?</b> Of everyone we've met so far — Jonathan, Tom, Tanya, Simon, Brin, even Alex — who feels most suspicious to you right now, and why?</div>
   `;
   slidesEl.appendChild(div);
 }
@@ -1515,6 +1610,9 @@ const noteLabels = [
   {key:'ch13', label:'Chapter 13 — On the Road to Burford'},
   {key:'ch14', label:'Chapter 14 — The Cheshire Cat Bookshop'},
   {key:'ch15', label:'Chapter 15 — You’re a Bolter'},
+  {key:'ch16', label:'Chapter 16 — Married to the Past'},
+  {key:'ch17', label:'Chapter 17 — Safi’s Discoveries'},
+  {key:'ch18', label:'Chapter 18 — A Word With Jonathan'},
   {key:'final', label:'Big-Picture Discussion Questions'}
 ];
 function escapeHtml(str){
@@ -1558,7 +1656,7 @@ pdfBtn.addEventListener('click', () => {
     </head>
     <body>
       <h1>Guilty by Definition — Book Club Notes</h1>
-      <div class="subtitle">Chapters 1–15 discussion &middot; ${new Date().toLocaleDateString()}</div>
+      <div class="subtitle">Chapters 1–18 discussion &middot; ${new Date().toLocaleDateString()}</div>
       ${bodyHtml}
     </body>
     </html>
